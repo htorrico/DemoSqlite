@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoSqlite.Views.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nombre Artista" />
+            <Entry x:Name="txtNombre"/>
+            <Button x:Name="btnGuardar" Text="Crear Artista" Clicked="btnGuardar_Clicked"/>
+            <Button x:Name="btnGuardarGrupal" Text="Crear Artistas" Clicked="btnGuardarGrupal_Clicked"/>
+            <Button x:Name="btnListaa" Text="Listar Artista" Clicked="btnListaa_Clicked"/>
+            <Button x:Name="btnEliminar" Text="Borrar Aristas" Clicked="btnEliminar_Clicked"/>
+            <ListView x:Name="lvArtistas">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Nombre}"></Label>
+                        </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
